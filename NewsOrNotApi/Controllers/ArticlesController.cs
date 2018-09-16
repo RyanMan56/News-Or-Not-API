@@ -29,5 +29,11 @@ namespace NewsOrNotApi.Controllers
                 _context.SaveChanges();
             }
         }
+
+        [HttpGet]
+        public ActionResult<List<Article>> GetAll()
+        {
+            return _context.Articles.ToList();
+        }
     }
 }
